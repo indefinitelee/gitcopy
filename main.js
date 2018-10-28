@@ -43,7 +43,7 @@ function doPrompts() {
 }
 
 // helper method to check the link header of the response from GH server to see if there is a next link
-function checkIfNext(res)
+function checkIfNext(res) {
   if (res.headers._headers.link) {
     const links = res.headers._headers.link;
     const hasNext = links[0].includes('rel="next"');
